@@ -24,7 +24,7 @@ export default function Features() {
         <section className="py-24">
             <div className="container">
                 <div className="flex justify-center">
-                    <Tag>Features</Tag>
+                    <Tag>Características</Tag>
                 </div>
                 <h2 className="text-6xl font-medium text-center mt-6 max-w-2xl mx-auto">
                     Donde el poder se une a la{" "}
@@ -109,7 +109,9 @@ export default function Features() {
                             <span className="bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex justify-center items-center text-xl">
                                 &#10038;
                             </span>
-                            <span className="font-medium md:text-lg">{feature}</span>
+                            <span className="font-medium md:text-lg">
+                                {feature}
+                            </span>
                         </div>
                     ))}
                 </div>
