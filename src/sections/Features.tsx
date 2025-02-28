@@ -4,6 +4,7 @@ import Tag from "@/components/Tag";
 import avatar1 from "@/assets/images/avatar-ashwin-santiago.jpg";
 import avatar2 from "@/assets/images/avatar-lula-meyers.jpg";
 import avatar3 from "@/assets/images/avatar-florence-shaw.jpg";
+import avatar4 from "@/assets/images/avatar-owen-garcia.jpg";
 
 import Image from "next/image";
 import Avatar from "@/components/Avatar";
@@ -35,7 +36,7 @@ export default function Features() {
                         title="Colaboración en tiempo real"
                         description="Trabajen juntos a la perfección con la edición
                                 de conflictos"
-                        className="md:col-span-2 lg:col-span-1"
+                        className="md:col-span-2 lg:col-span-1 group"
                     >
                         <div className="aspect-video flex items-center justify-center">
                             <Avatar className="z-40">
@@ -59,8 +60,13 @@ export default function Features() {
                                     className="rounded-full"
                                 />
                             </Avatar>
-                            <Avatar className="-ml-6 border-transparent">
-                                <div className="size-full bg-neutral-700 rounded-full inline-flex items-center justify-center gap-1">
+                            <Avatar className="-ml-6 border-transparent group-hover:border-green-500 transition">
+                                <div className="size-full bg-neutral-700 rounded-full inline-flex items-center justify-center gap-1 relative">
+                                    <Image
+                                        src={avatar4}
+                                        alt="Avatar 4"
+                                        className="absolute size-full rounded-full opacity-0 group-hover:opacity-100 transition duration-500"
+                                    />
                                     {Array.from({ length: 3 }).map((_, i) => (
                                         <span
                                             className="size-1.5 rounded-full bg-white inline-flex"
@@ -75,13 +81,20 @@ export default function Features() {
                         title="Prototipos interactivos"
                         description="Involucre a su cliente con prototipos que
                                 reaccionen a acciones del usuario"
-                        className="md:col-span-2 lg:col-span-1"
+                        className="md:col-span-2 lg:col-span-1 group"
                     >
                         <div className="aspect-video flex items-center justify-center">
-                            <p className="text-4xl font-extrabold text-white/20 text-center">
+                            <p className="text-4xl font-extrabold text-white/20 group-hover:text-white/10 transition duration-500 text-center">
                                 Hemos logrado un crecimiento{" "}
-                                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent block">
-                                    increíble
+                                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent block relative">
+                                    <span>increíble</span>
+                                    <video
+                                        src={"/assets/gif-incredible.mp4"}
+                                        autoPlay
+                                        loop
+                                        playsInline
+                                        className="absolute bottom-full left-1/2 -translate-x-1/2 rounded-2xl shadow-xl opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none"
+                                    />
                                 </span>{" "}
                                 este año.
                             </p>
@@ -91,12 +104,18 @@ export default function Features() {
                         title="Acciones rápidas del teclado"
                         description="Potentes comandos para ayudarle a crear diseños
                                 más rápidamente"
-                        className="md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-auto"
+                        className="md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-auto group"
                     >
                         <div className="aspect-video flex items-center justify-center gap-4">
-                            <Key className="w-28">shift</Key>
-                            <Key className="">alt</Key>
-                            <Key className="">C</Key>
+                            <Key className="w-28 group-hover:outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all group-hover:translate-y-1">
+                                shift
+                            </Key>
+                            <Key className="outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition duration-300 group-hover:translate-y-1 delay-150">
+                                alt
+                            </Key>
+                            <Key className="outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition duration-150 group-hover:translate-y-1 delay-300">
+                                C
+                            </Key>
                         </div>
                     </FeatureCard>
                 </div>
@@ -104,9 +123,9 @@ export default function Features() {
                     {features.map((feature) => (
                         <div
                             key={feature}
-                            className="bg-neutral-900 border border-white/10 inline-flex px-3 md:px-5 py-1.5 md:py-2 rounded-2xl gap-3 items-center"
+                            className="bg-neutral-900 border border-white/10 inline-flex px-3 md:px-5 py-1.5 md:py-2 rounded-2xl gap-3 items-center group hover:scale-105 transition duration-500"
                         >
-                            <span className="bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex justify-center items-center text-xl">
+                            <span className="bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex justify-center items-center text-xl group-hover:rotate-45 transition duration-500">
                                 &#10038;
                             </span>
                             <span className="font-medium md:text-lg">
