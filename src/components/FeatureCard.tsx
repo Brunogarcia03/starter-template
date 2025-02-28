@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import { twMerge } from "tailwind-merge";
 
 const FeatureCard = (props: {
