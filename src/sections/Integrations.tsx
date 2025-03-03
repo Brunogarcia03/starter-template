@@ -52,7 +52,7 @@ export default function Integrations() {
                         <Tag>Integraciones</Tag>
                         <h2 className="text-6xl font-medium mt-6 items-center lg:gap-16">
                             Jugá bien con los
-                            <span className="text-lime-400">demas</span>
+                            <span className="text-lime-400"> demas</span>
                         </h2>
                         <p className="text-white/50 mt-4 text-lg">
                             Layers se conecta perfectamente con tu favorito y
@@ -64,6 +64,7 @@ export default function Integrations() {
                         <IntegrationColumn integrations={integrations} />
                         <IntegrationColumn
                             integrations={integrations.slice().reverse()}
+                            reverse
                             className="hidden md:flex"
                         />
                     </div>
